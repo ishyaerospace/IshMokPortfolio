@@ -8,6 +8,11 @@ import menu_icon from './images/menu_icon.png'
 import menu_icon_dark from './images/menu_icon_dark.png'
 import cert_icon from './images/cert_icon.png'
 import cert_icon_dark from './images/cert_icon_dark.png'
+import arrow_icon from './images/arrow_icon.png'
+import arrow_icon_dark from './images/arrow_icon_dark.png'
+import close_icon from './images/close_icon.png'
+import close_icon_dark from './images/close_icon_dark.png'
+
 
 
 
@@ -23,6 +28,11 @@ export const assets = {
     menu_icon,
     menu_icon_dark,
     cert_icon,
-    cert_icon_dark
+    cert_icon_dark,
+    arrow_icon,
+    arrow_icon_dark,
+    close_icon,
+    close_icon_dark
+
 
 }
