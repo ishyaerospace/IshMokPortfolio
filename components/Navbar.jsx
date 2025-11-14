@@ -17,17 +17,20 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className='w-full fixed px-5 lg:px-8 xl:px-[8%] py-3 flex items-center justify-between z-50 bg-white shadow-sm bg-opacity-100'>
+      <nav className='w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50 bg-white shadow-sm bg-opacity-100'>
         <a href='top'>
-            <Image src={assets.logo} alt="logo" className='w-15 cursor-pointer mr-14'/>
+            <Image src={assets.logo} alt="logo" className='w-15 cursor-pointer mr-14 rounded-full'/>
         </a>
-        <ul className='hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 bg-gray-100 shadow-lg bg-opacity-50 '>
+        
+        <ul className='hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 bg-gray-100 shadow-lg bg-opacity-50 absolute left-1/2 -translate-x-1/2 whitespace-nowrap'>
             <li><a className="font-ovo" href="#top">Home</a></li>
             <li><a className="font-ovo" href="#about">About me</a></li>
-            <li><a className="font-ovo" href="#project">Project</a></li>
-            <li><a className="font-ovo" href="#contact">Contact</a></li>
+            <li><a className="font-ovo" href="#Dashbaord">Dashbaord</a></li>
+            <li><a className="font-ovo" href="#project">My work</a></li>
+            <li><a className="font-ovo" href="#contact">Contact me</a></li>
         </ul>
-        <div className="flex items-center gap-4">
+        
+        <div className="flex items-center gap-3">
             <button className="cursor-pointer"><Image src={assets.moon_icon} alt="" className="w-6" /></button>
             <a href="#contact" className='hidden lg:flex items-center gap-3 px-10 py-2.5 border border-gray-500 rounded-full ml-4 font-ovo bg-gray-100 shadow-lg'>contact<Image src={assets.arrow_icon_dark} alt="" className='w-3'/></a>
             <button className="cursor-pointer block md:hidden ml-3"><Image src={assets.menu_icon_dark} alt="" className="w-6" onClick={openMenu}/></button>
@@ -43,6 +46,7 @@ const Navbar = () => {
 
             <li><a className="font-ovo" onClick={closeMenu} href="#top">Home</a></li>
             <li><a className="font-ovo" onClick={closeMenu} href="#about">About me</a></li>
+            <li><a className="font-ovo" onClick={closeMenu} href="#Dashbaord">Dashboard</a></li>
             <li><a className="font-ovo" onClick={closeMenu} href="#project">Project</a></li>
             <li><a className="font-ovo" onClick={closeMenu} href="#contact">Contact</a></li>
         </ul>

@@ -4,7 +4,7 @@ import { assets } from '@/assets/assets'
 
 const Header = () => {
   return (
-    <div className='w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center lg:translate-y-[-180px] gap-4'>
+    <div className='w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4'>
       <div>
         <Image src={assets.logo} alt="" className='rounded-full w-32'/>
       </div>
