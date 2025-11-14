@@ -25,7 +25,7 @@ const Navbar = () => {
         <ul className='hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 bg-gray-100 shadow-lg bg-opacity-50 absolute left-1/2 -translate-x-1/2 whitespace-nowrap'>
             <li><a className="font-ovo" href="#top">Home</a></li>
             <li><a className="font-ovo" href="#about">About me</a></li>
-            <li><a className="font-ovo" href="#Dashbaord">Dashbaord</a></li>
+            <li><a className="font-ovo" href="#dashbaord">Dashboard</a></li>
             <li><a className="font-ovo" href="#project">My work</a></li>
             <li><a className="font-ovo" href="#contact">Contact me</a></li>
         </ul>
@@ -46,7 +46,7 @@ const Navbar = () => {
 
             <li><a className="font-ovo" onClick={closeMenu} href="#top">Home</a></li>
             <li><a className="font-ovo" onClick={closeMenu} href="#about">About me</a></li>
-            <li><a className="font-ovo" onClick={closeMenu} href="#Dashbaord">Dashboard</a></li>
+            <li><a className="font-ovo" onClick={closeMenu} href="#dashbaord">Dashboard</a></li>
             <li><a className="font-ovo" onClick={closeMenu} href="#project">Project</a></li>
             <li><a className="font-ovo" onClick={closeMenu} href="#contact">Contact</a></li>
         </ul>

@@ -8,7 +8,7 @@ const Header = () => {
       <div>
         <Image src={assets.logo} alt="" className='rounded-full w-32'/>
       </div>
-      <h3 className= "flex items-end gap-2 text-xl md:text-2xl mb-3 font-ovo">Hi! I am Muahammd Ishtiaq Mokbul</h3>
+      <h3 className= "flex items-end gap-2 text-xl md:text-2xl mb-3 font-ovo">Hi! I am muhammad Ishtiaq Mokbul</h3>
       <h1 className='text-3xl sm:text-6xl lg:text-[66px] font-ovo'>Developer</h1>
       <p className='max-w-2xl mx-auto font-ovo'>I am a developer in frontend, backend and electronics</p>
     </div>
