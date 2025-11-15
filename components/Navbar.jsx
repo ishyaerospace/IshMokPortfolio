@@ -17,12 +17,12 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className='w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50 bg-white shadow-sm bg-opacity-100'>
+      <nav className='w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50 bg-opacity-100'>
         <a href='top'>
             <Image src={assets.logo} alt="logo" className='w-15 cursor-pointer mr-14 rounded-full'/>
         </a>
         
-        <ul className='hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 bg-gray-100 shadow-lg bg-opacity-50 absolute left-1/2 -translate-x-1/2 whitespace-nowrap'>
+        <ul className='hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 bg-gray-100 shadow-lg bg-opacity-100 absolute left-1/2 -translate-x-1/2 whitespace-nowrap'>
             <li><a className="font-ovo" href="#top">Home</a></li>
             <li><a className="font-ovo" href="#about">About me</a></li>
             <li><a className="font-ovo" href="#dashbaord">Dashboard</a></li>
