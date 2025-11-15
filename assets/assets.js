@@ -12,7 +12,7 @@ import arrow_icon from './images/arrow_icon.png'
 import arrow_icon_dark from './images/arrow_icon_dark.png'
 import close_icon from './images/close_icon.png'
 import close_icon_dark from './images/close_icon_dark.png'
-
+import download_icon_dark from './images/download_icon_dark.png'
 
 
 
@@ -32,7 +32,8 @@ export const assets = {
     arrow_icon,
     arrow_icon_dark,
     close_icon,
-    close_icon_dark
+    close_icon_dark,
+    download_icon_dark
 
 
 }
