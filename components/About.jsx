@@ -28,6 +28,7 @@ const About = () => {
                         </li>
                     ))}
                 </ul>
+                
         </div>
       </div>
     </div>

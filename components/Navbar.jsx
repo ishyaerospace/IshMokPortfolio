@@ -1,4 +1,4 @@
-import React, {useRef} from 'react'
+import React, {useEffect, useRef} from 'react'
 import Image from 'next/image'
 import {assets} from '@/assets/assets.js'
 
@@ -18,7 +18,7 @@ const Navbar = () => {
   return (
     <>
       <nav className='w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50 bg-opacity-100'>
-        <a href='top'>
+        <a href='#top'>
             <Image src={assets.logo} alt="logo" className='w-15 cursor-pointer mr-14 rounded-full'/>
         </a>
         
