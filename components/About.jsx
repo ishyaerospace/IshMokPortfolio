@@ -19,11 +19,11 @@ const About = () => {
                 I am also a network hobbiest with a homelab setup. Im a hands-on problem solver and self-taught</p>
 
                 <ul className='grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-2xl'>
-                    {infoList.map(({icon, icon_dark, title, description},
+                    {infoList.map(({icon, iconDark, title, description},
                     index)=>(
-                        <li className='border-[0.5px] border-gray-400 rounded-xl cursor-pointer' key={index}>
-                            <Image src={icon_dark} alt={title} className='w-7 mt-3'/>
-                            <h3 className='my-3 font-semibold text-gray-700'>{title}</h3>
+                        <li className='border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-light-hover hover:-translate-y-1 duration-500' key={index}>
+                            <Image src={iconDark} alt={title} className='w-7 mt-3'/>
+                            <h3 className='my-2 font-semibold text-gray-700'>{title}</h3>
                             <p className='text-gray-600 text-sm'>{description}</p>
                         </li>
                     ))}
