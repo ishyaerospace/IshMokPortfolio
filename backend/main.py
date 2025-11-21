@@ -6,7 +6,7 @@ import time
 app = FastAPI()
 GitHub_username = "ishyaerospace"
 CACHE_FILE = "backend/cache/github_data.json"
-CACHE_EXPIRY = 3600 # 1 hour
+CACHE_EXPIRY = 0 # placeholder for now
 
 
 def load_cache():
@@ -62,7 +62,9 @@ def fetch_github_data():
 @app.get("/api/github")
 def get_github_info():
     cache = load_cache()
-
+    
+    print("running github script")
+    
     if not cache or (time.time()) - cache["fetched_at"] > CACHE_EXPIRY:
         cache = fetch_github_data()
         save_cache(cache)
