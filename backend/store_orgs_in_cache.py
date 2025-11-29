@@ -29,6 +29,7 @@ async def root():
         for org in orgs
         ],
     }
+    print("Writing Cache...")
     save_cache(cache)
     return cache 
     
