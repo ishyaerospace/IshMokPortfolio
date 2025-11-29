@@ -1,7 +1,7 @@
 import json
 from fastapi import FastAPI
 import requests
-import time
+from time import time
 
 app = FastAPI()
 GitHub_username = "ishyaerospace"
@@ -31,7 +31,7 @@ def fetch_github_data():
     orgs = requests.get(orgs_url).json()
 
     return {
-        "fetched_at": time.time(),
+        "fetched_at": time(),
         "profile":{
             "login": profile["login"],
             "bio": profile["bio"],
@@ -60,7 +60,7 @@ def fetch_github_data():
 
 
 @app.get("/api/github")
-def get_github_info():
+async def get_github_info():
     cache = load_cache()
     
     print("running github script")
