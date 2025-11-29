@@ -6,7 +6,7 @@ from time import time
 app = FastAPI()
 
 GitHub_username = "ishyaerospace"
-repos_url = f"https://api.github.com/users/{GitHub_username}/repos"
+orgs_url = f"https://api.github.com/users/{GitHub_username}/orgs"
 CACHE_FILE = "cache/github_data.json"
 
 
@@ -17,16 +17,16 @@ def save_cache(data):
 
 @app.get("/")
 async def root():
-    repos = requests.get(repos_url).json()
+    orgs = requests.get(orgs_url).json()
     cache = {
         "Time": time(),
-        "repos":[ 
+        "orgs": [
             {
-            "name": repo["name"],
-            "description": repo["description"],
-            "url": repo["html_url"]
+            "login": org["login"],
+            "avatar": org["avatar_url"],
+            "url": org["url"],
             }
-        for repo in repos
+        for org in orgs
         ],
     }
     save_cache(cache)
