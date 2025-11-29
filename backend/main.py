@@ -5,7 +5,7 @@ from time import time
 
 app = FastAPI()
 GitHub_username = "ishyaerospace"
-CACHE_FILE = "backend/cache/github_data.json"
+CACHE_FILE = "cache/github_data.json"
 CACHE_EXPIRY = 0 # placeholder for now
 
 
@@ -15,7 +15,7 @@ def load_cache():
             data = json.load(file)
             return data
     except FileNotFoundError:
-        return None
+        return "unable to find cache file"
 
 def save_cache(data):
     with open(CACHE_FILE, "w") as file:
@@ -65,7 +65,7 @@ async def get_github_info():
     
     print("running github script")
     
-    if not cache or (time.time()) - cache["fetched_at"] > CACHE_EXPIRY:
+    if not cache or time() - cache["fetched_at"] > CACHE_EXPIRY:
         cache = fetch_github_data()
         save_cache(cache)
 
