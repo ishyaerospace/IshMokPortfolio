@@ -11,7 +11,7 @@ profile_url = f"https://api.github.com/users/{GitHub_username}"
 repos_url = f"https://api.github.com/users/{GitHub_username}/repos"
 
 def save_cache(data):
-    with open(CACHE_FILE, "a") as file:
+    with open(CACHE_FILE, "w") as file:
         json.dump(data, file, indent=4)
 
 """
