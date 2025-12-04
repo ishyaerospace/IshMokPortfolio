@@ -19,7 +19,7 @@ def save_cache(data):
 async def root():
     orgs = requests.get(orgs_url).json()
     cache = {
-        "Time": time(),
+        "fetched_at": time(),
         "orgs": [
             {
             "login": org["login"],
@@ -29,7 +29,6 @@ async def root():
         for org in orgs
         ],
     }
-    print("Writing Cache...")
     save_cache(cache)
     return cache 
     
