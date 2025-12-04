@@ -14,9 +14,9 @@ def save_cache(data):
     with open(CACHE_FILE, "a") as file:
         json.dump(data, file, indent=4)
 
-
+"""
 @app.get("/github/profile")
-async def get_github_info():
+async def get_github_profile():
     profile = requests.get(profile_url).json()
 
     cache =  {
@@ -47,5 +47,31 @@ async def get_github_repos():
         ],
     }
 
+    save_cache(cache)
+    return cache
+"""
+@app.get("/")
+async def get_github_info():
+    profile = requests.get(profile_url).json()
+    repos = requests.get(repos_url).json()
+
+    cache =  {
+        "fetched_at": time(),
+        "profile":{
+            "login": profile["login"],
+            "bio": profile["bio"],
+            "avatar": profile["avatar_url"],
+            "public_repos": profile["public_repos"]
+        },
+        "repos":[ 
+        {
+            "name": repo["name"],
+            "description": repo["description"],
+            "url": repo["html_url"]
+        }
+        for repo in repos
+        ],
+    }
+    
     save_cache(cache)
     return cache
