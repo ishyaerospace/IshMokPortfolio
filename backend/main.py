@@ -14,8 +14,8 @@ def load_cache():
         with open(CACHE_FILE, "r") as file:
             data = json.load(file)
             return data
-    except FileNotFoundError:
-        return "unable to find cache file"
+    except (FileNotFoundError, json.JSONDecodeError):
+        return None
 
 def save_cache(data):
     with open(CACHE_FILE, "w") as file:
@@ -63,7 +63,7 @@ def fetch_github_data():
 async def get_github_info():
     cache = load_cache()
 
-    if cache == "" or time() - cache["fetched_at"] > CACHE_EXPIRY:
+    if cache == None or time() - cache["fetched_at"] > CACHE_EXPIRY:
         cache = fetch_github_data()
         save_cache(cache)
 
